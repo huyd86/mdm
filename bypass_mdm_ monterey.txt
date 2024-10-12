@@ -1,0 +1,4 @@
+### bypass MDM for MacOS Monterey downward
+### source: https://laptopvang.com/mdm-la-gi/
+
+sudo sh -c "echo $'# Turn off MDM Notification\n0.0.0.0 deviceenrollment.apple.com\n0.0.0.0 mdmenrollment.apple.com\n0.0.0.0 iprofiles.apple.com\n0.0.0.0 iprofiles-st.apple.com.akadns.net\n0.0.0.0 mdm.fe.apple-dns.net\n0.0.0.0 iprofiles-st.apple.com.akadns.net\n0.0.0.0 gdmf.apple.com\n0.0.0.0 gdmf.v.aaplimg.com\n0.0.0.0 albert.apple.com\n0.0.0.0 rn-albert-prod.apple.com\n0.0.0.0 acmdm.apple.com\n' >> /etc/hosts"; cat /etc/hosts | grep apple;
